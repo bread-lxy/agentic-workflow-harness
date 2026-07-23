@@ -13,6 +13,25 @@ Use the project's existing convention when available. Otherwise create a compact
 
 Optional files can include run logs, source indexes, issue notes, or artifact manifests when the project needs them.
 
+## Mutability Rules
+
+- `progress.md`'s Current Snapshot section is the only part meant to be overwritten. Its Completed section is an append-only log: add new entries, don't rewrite or delete old ones. When it grows past a quick read, move older entries to `task_state/archive/progress-YYYY-MM.md` and leave a pointer behind.
+- `decision_log.md` is append-only. To reverse a past decision, add a new entry and mark the old one `Superseded` with a link, rather than editing or removing it.
+- This keeps concurrent sessions or agents from silently overwriting each other's history, and keeps old decisions auditable even after direction changes.
+
+## feature_list.json Shape
+
+Keep entries structurally consistent so the file stays machine-readable across sessions and agents. Each item should carry:
+
+- `id`: stable short identifier.
+- `title`: short description.
+- `status`: one of `pending`, `in_progress`, `blocked`, `done`.
+- `path`: source locator (file, doc, or system) the item relates to.
+- `updated_at`: date of the last status change.
+- `notes`: optional free text.
+
+Don't invent new status values or field names per session — reuse this shape so downstream tooling and future agents can rely on it.
+
 ## Start Protocol
 
 1. Read local instructions and memory files.

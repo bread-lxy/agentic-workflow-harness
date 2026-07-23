@@ -6,6 +6,7 @@ A project should not load every memory file for every task. Use a small routing 
 
 ```text
 AGENTS.md
+CLAUDE.md (imports AGENTS.md, only needed for Claude Code)
 knowledge/
   README.md
   agent-memory/
@@ -21,6 +22,8 @@ knowledge/
 ## File Responsibilities
 
 `AGENTS.md` is the first project instruction file. It should describe the default reading order, boundaries, and how to use the harness inside the project.
+
+`CLAUDE.md` exists only so Claude Code loads `AGENTS.md` automatically via `@AGENTS.md` (Claude Code does not read `AGENTS.md` natively). Tools that already follow the AGENTS.md convention don't need it.
 
 `knowledge/README.md` is the knowledge router. It should tell the agent which memory files to read for different kinds of work.
 

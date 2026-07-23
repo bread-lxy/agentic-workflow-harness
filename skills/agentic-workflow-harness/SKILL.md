@@ -1,6 +1,6 @@
 ---
 name: agentic-workflow-harness
-description: Use when Codex is doing complex agentic work, long-running tasks, workflow or tool design, durable memory design, handoff or resume across context compaction, or deciding between direct handling, workflow patterns, review-improve loops, and adaptive multi-agent collaboration.
+description: Use when an AI coding agent (Codex, Claude Code, or similar) is doing complex agentic work, long-running tasks, workflow or tool design, durable memory design, handoff or resume across context compaction, or deciding between direct handling, workflow patterns, review-improve loops, and adaptive multi-agent collaboration.
 ---
 
 # Agentic Workflow Harness

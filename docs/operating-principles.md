@@ -36,3 +36,7 @@ The main agent remains responsible for synthesis.
 ## 6. Leave A Trail
 
 If work may continue later, update the handoff. A good handoff lets another session resume without guessing.
+
+## 7. Prune, Don't Just Accumulate
+
+Durable state that only grows stops being durable — it becomes a junk drawer nobody reads in full. Archive old progress instead of piling it up, mark superseded decisions instead of deleting or ignoring them, and treat any memory file that has grown past a quick read as a signal to split it, not a signal to keep appending.

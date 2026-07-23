@@ -20,6 +20,7 @@ REQUIRED_FILES = [
     "skills/agentic-workflow-harness/references/multi-agent-collaboration.md",
     "skills/agentic-workflow-harness/references/validation-and-handoff.md",
     "templates/project/AGENTS.md",
+    "templates/project/CLAUDE.md",
     "templates/project/knowledge/README.md",
     "templates/project/knowledge/agent-memory/AGENT_MEMORY.md",
     "templates/project/knowledge/agent-memory/WORKFLOW_PLAYBOOK.md",
@@ -33,6 +34,7 @@ REQUIRED_FILES = [
     "scripts/install_codex_skill.py",
     "scripts/bootstrap_project.py",
     "scripts/check_package.py",
+    "scripts/check_project_memory.py",
 ]
 
 
